@@ -6,30 +6,30 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.header img {
   width: 100%;
 }
 
-.aaa .more_inf {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .aaa {
+  .header {
     text-align: center;
   }
 
 }
 
-.centered-main-page-element {
+.main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -41,26 +41,33 @@ body {
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.add {
+  margin: 16px 0;
+}
+
+.add__wrapper {
   display: flex;
 }
+
+/* Ниже ul и li сброс стандарных стилей, поэтому без классов */
 
 ul {
   margin: 0;
   padding: 0px;
 }
 
-li,
-h3 {
+li {
   list-style: none;
 }
 
-input, 
-button {
+/* Выше ul и li сброс стандарных стилей, поэтому без классов */
+
+.input, 
+.btn {
   outline: none;
 }
 
-button {
+.btn {
   background: none;
   border: 0px;
   color: #888;
@@ -70,14 +77,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
 
-h3,
-label[for="new-task"] {
+.subtitle {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,7 +93,7 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -100,18 +106,18 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.input:focus {
   color: #333;
 }
 
 /* New Task */
 
-label[for="new-task"] {
+.add__title {
   display: block;
   margin: 0 0 20px;
 }
 
-input #new-task {
+.add__task {
   width: 318px;
 }
 
@@ -164,15 +170,15 @@ ul#completed-tasks label {
 
 /* Edit Task */
 
-ul li input[type="text"] {
+.input-edit {
   display: none;
 }
 
-ul li.editMode input[type="text"] {
+.edit-mode .input-edit {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.label-edit {
   display: none;
 }
